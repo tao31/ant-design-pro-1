@@ -10,7 +10,6 @@ export default class Index extends PureComponent {
       payload: collapsed,
     });
   }
-
   render() {
     const { collapsed, isMobile } = this.props;
     return isMobile ? (
