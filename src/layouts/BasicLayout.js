@@ -12,10 +12,9 @@ import GlobalFooter from '../components/GlobalFooter';
 import SiderMenu from '../components/SiderMenu';
 import NotFound from '../routes/Exception/404';
 import { getRoutes } from '../utils/utils';
-import { getMenuData } from '../common/menu';
-
 import Authorized from '../components/Authorized';
 import { getRole } from '../utils/role';
+import { getMenuData } from '../common/menu';
 
 const { Content } = Layout;
 const { AuthorizedRoute } = Authorized;
@@ -137,9 +136,9 @@ class BasicLayout extends React.PureComponent {
                   )
                 }
                 {
-                 redirectData.map(item =>
-                  <Redirect key={item.from} exact from={item.from} to={item.to} />
-                 )
+                  redirectData.map(item =>
+                    <Redirect key={item.from} exact from={item.from} to={item.to} />
+                  )
                 }
                 <Redirect exact from="/" to="/dashboard/analysis" />
                 <Route render={NotFound} />
